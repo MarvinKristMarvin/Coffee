@@ -1,0 +1,41 @@
+.produits {
+  background-color: var(--creamy-baby);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  padding-top: 40px;
+  & .produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+
+    background-image: url("../assets/coffees/100955890.png"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+
+    & p {
+      color: white;
+      font-weight: 800;
+      font-size: 20px;
+      text-align: center;
+    }
+    & button {
+      border: 1px solid var(--coffee-medium);
+      padding: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: white;
+      color: var(--coffee-medium);
+
+      &:hover {
+        cursor: grab;
+      }
+    }
+  }
+}
