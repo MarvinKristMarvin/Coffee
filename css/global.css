@@ -12,3 +12,23 @@
 body {
   font-family: "Playfair Display", serif;
 }
+
+.erreur-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+  & h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+  }
+  & p {
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--coffee-dark);
+  }
+}
