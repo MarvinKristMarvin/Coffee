@@ -13,6 +13,10 @@
 
   & .header-produit {
     padding-inline: 20px;
+    padding-block: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     & h2 {
       font-weight: 700;
       font-size: 23px;
@@ -35,7 +39,7 @@
     border: 1px solid var(--coffee-medium);
     padding: 10px;
     align-self: center;
-    margin-block: 20px;
+    margin-block: 30px;
 
     font-weight: 600;
     font-size: 16px;
