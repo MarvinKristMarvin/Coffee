@@ -7,7 +7,7 @@ const mainController = require("./controllers/mainController.js");
 const router = Router();
 
 // page d'accueil
-router.get("/prout", mainController.renderAccueil);
+router.get("/", mainController.renderAccueil);
 router.get("/catalogue", mainController.renderCatalogue);
 router.get("/produit", mainController.renderProduit);
 
