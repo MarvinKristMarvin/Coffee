@@ -12,12 +12,11 @@
     align-items: center;
     width: 300px;
 
-    background-image: url("../assets/coffees/100955890.png"); /* The image used */
+    /* The image used */
     height: 100%; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-
     & p {
       color: white;
       font-weight: 800;

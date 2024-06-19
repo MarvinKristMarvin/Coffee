@@ -18,27 +18,17 @@
       <div class="nouveautes">
         <h3>Nouveautés</h3>
         <div class="produits">
-          <div class="produit">
-            <img class="background-produit" src="" alt="" />
-            <p class="description-produit">
-              Café de Madagascar, corsé et prestigieux...
-            </p>
-            <button class="bouton-decouvrir">Découvrir</button>
-          </div>
-          <div class="produit">
-            <img class="background-produit" src="" alt="" />
-            <p class="description-produit">
-              Café du Guatemala, goûtu et mousseux...
-            </p>
-            <button class="bouton-decouvrir">Découvrir</button>
-          </div>
-          <div class="produit">
-            <img class="background-produit" src="" alt="" />
-            <p class="description-produit">
-              Café d'Afrique, sombre et énergisant...
-            </p>
-            <button class="bouton-decouvrir">Découvrir</button>
-          </div>
+          <% nouveautes.forEach(nouveaute => { %>
+            <div class="produit">
+              
+              <img class="background-produit" src="" alt="" style="background-image: url('/assets/coffees/<%= nouveaute.reference %>.png');"/>
+            
+              <p class="description-produit">
+                <%= nouveaute.name %>
+              </p>
+              <button class="bouton-decouvrir">Découvrir</button>
+            </div>          
+          <% console.log (nouveaute.reference)}) %>          
         </div>
       </div>
     </main>
