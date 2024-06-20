@@ -1,6 +1,11 @@
 footer {
+  box-sizing: border-box;
   text-align: center;
   padding: 40px;
   color: var(--coffee-dark);
   background-color: var(--creamy-baby);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-weight: 700;
 }

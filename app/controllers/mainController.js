@@ -12,11 +12,32 @@ const mainController = {
       res.render("404");
     }
   },
-  renderCatalogue: (req, res) => {
-    res.render("catalogue");
+  renderCatalogue: async (req, res) => {
+    try {
+      const cafes = await dataMapper.getTousLesCafes();
+      res.render("catalogue", { cafes });
+    } catch (error) {
+      console.log(error);
+      res.render("404");
+    }
   },
-  renderProduit: (req, res) => {
-    res.render("produit");
+  renderProduit: async (req, res) => {
+    try {
+      const id = Number(req.params.id);
+      const cafe = await dataMapper.getCafeById(id);
+      res.render("produit", { cafe });
+    } catch (error) {
+      console.log(error);
+      res.render("404");
+    }
+  },
+  renderBoutique: async (req, res) => {
+    try {
+      res.render("boutique");
+    } catch (error) {
+      console.log(error);
+      res.render("404");
+    }
   },
 
   // méthode pour la page article

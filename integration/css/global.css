@@ -13,7 +13,8 @@ body {
   font-family: "Playfair Display", serif;
 }
 
-.erreur-404 {
+.erreur-404,
+.erreur-boutique {
   display: flex;
   flex-direction: column;
   justify-content: center;

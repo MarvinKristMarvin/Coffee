@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 10px;
   background-color: var(--creamy-baby);
+  height: 80px;
 
   & div {
     display: flex;

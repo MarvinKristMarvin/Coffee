@@ -9,7 +9,8 @@ const router = Router();
 // page d'accueil
 router.get("/", mainController.renderAccueil);
 router.get("/catalogue", mainController.renderCatalogue);
-router.get("/produit", mainController.renderProduit);
+router.get("/produit/:id", mainController.renderProduit);
+router.get("/boutique", mainController.renderBoutique);
 
 // on exporte le router
 module.exports = router;

@@ -1,6 +1,7 @@
 .accueil {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
 
   & .presentation-accueil {
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 35px;
 
     & h2 {
       color: var(--coffee-medium);
@@ -24,7 +25,7 @@
       margin-block: 20px;
     }
 
-    & button {
+    & a button {
       border: 1px solid var(--coffee-medium);
       padding: 10px;
       font-weight: 500;
@@ -39,21 +40,23 @@
   }
 
   & .image-accueil {
-    width: 50%;
+    width: 100%;
 
     & img {
       width: 100%;
+      height: 150px;
+      object-fit: cover;
     }
   }
 }
 
 .nouveautes {
-  background-color: var(--creamy-baby);
   & h3 {
-    color: var(--coffee-dark);
-    font-size: 20px;
-    font-weight: 700;
-    padding-left: 20px;
-    padding-top: 40px;
+    background-color: var(--creamy-baby);
+    color: var(--coffee-medium);
+    font-size: 25px;
+    font-weight: 600;
+    padding-block: 25px;
+    text-align: center;
   }
 }

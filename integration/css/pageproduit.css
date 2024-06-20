@@ -16,39 +16,47 @@
     padding-block: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    & h2 {
-      font-weight: 700;
-      font-size: 23px;
-      color: var(--coffee-dark);
+    justify-content: center;
+    font-size: 23px;
+    color: var(--coffee-dark);
+    margin-inline: 10px;
+    & * {
+      margin-inline: 15px;
     }
-    & p {
+    & h2,
+    .prix {
+      font-weight: 700;
+    }
+    & .origine,
+    .disponibilite {
       font-weight: 400;
-      font-size: 23px;
-      color: var(--coffee-dark);
     }
   }
   & .description-produit {
+    text-align: center;
     padding-inline: 20px;
     padding-top: 10px;
     font-weight: 500;
     font-size: 18px;
     color: var(--coffee-dark);
   }
-  & .bouton-catalogue {
-    border: 1px solid var(--coffee-medium);
-    padding: 10px;
+  & a {
     align-self: center;
-    margin-block: 30px;
+    & .bouton-catalogue {
+      border: 1px solid var(--coffee-medium);
+      padding: 10px;
 
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    background-color: white;
-    color: var(--coffee-medium);
+      margin-block: 30px;
 
-    &:hover {
-      cursor: grab;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: white;
+      color: var(--coffee-medium);
+
+      &:hover {
+        cursor: grab;
+      }
     }
   }
 }

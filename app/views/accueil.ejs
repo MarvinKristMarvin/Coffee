@@ -1,6 +1,9 @@
 <%- include('partials/header') %>
     <main>
       <div class="accueil">
+        <div class="image-accueil">
+          <img src="/assets/coffees/958090105.png" alt="" />
+        </div>
         <div class="presentation-accueil">
           <h2>Qui sommes-nous ?</h2>
           <p>
@@ -9,25 +12,24 @@
             amour profond pour cette délicieuse boisson, ils ont créé un espace
             où le café est célébré comme une expérience raffinée et inspirante.
           </p>
-          <button class="bouton-voir-catalogue">Voir le catalogue</button>
+          <a href="/catalogue"><button class="bouton-voir-catalogue">Voir le catalogue</button></a>
+          
         </div>
-        <div class="image-accueil">
-          <img src="../assets/about.jpg" alt="" />
-        </div>
+        
       </div>
       <div class="nouveautes">
-        <h3>Nouveautés</h3>
+        <h3>~ Nos nouveautés ~</h3>
         <div class="produits">
           <% nouveautes.forEach(nouveaute => { %>
-            <div class="produit">
-              
-              <img class="background-produit" src="" alt="" style="background-image: url('/assets/coffees/<%= nouveaute.reference %>.png');"/>
-            
-              <p class="description-produit">
+            <a href="/produit/<%= nouveaute.id %>">
+            <div class="produit" style="background-image: url('/assets/coffees/<%- nouveaute.reference %>.png');">
+              <%# ici mettre le div bg-img pour pouvoir faire le hover zoom sans bouger le div parent %>
+              <p class="description-produit" >
                 <%= nouveaute.name %>
               </p>
               <button class="bouton-decouvrir">Découvrir</button>
-            </div>          
+            </div>  
+          </a>        
           <% console.log (nouveaute.reference)}) %>          
         </div>
       </div>

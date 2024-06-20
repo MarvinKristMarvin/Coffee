@@ -1,21 +1,25 @@
 <%- include('partials/header') %>
     <main>
       <div class="illustration">
-        <img src="../assets/coffees/589100954.png" alt="" />
+        <img src="/assets/coffees/<%= cafe.reference %>.png" alt="" />
       </div>
       <div class="details-produit">
         <header class="header-produit">
-          <h2>Café du Pérou</h2>
-          <p>Publié le 20/02/2022</p>
+          <h2><%= cafe.name %></h2>
+          
+          <p class="origine">Origine : <%= cafe.origine %></p>
+          <p class="prix"><%= cafe.prix_kg %> &euro; le kg</p>
+          <% if (cafe.disponible === "Oui") { %>
+            <p class="disponibilite">En stock</p>
+          <% } else { %>
+            <p class="disponibilite">Rupture</p>
+          <% } %>
         </header>
         <p class="description-produit">
-          Mmmm le bon café noir Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Consectetur laboriosam facere neque dignissimos,
-          alias id at repellendus ratione asperiores consequuntur, eveniet
-          explicabo voluptate laborum accusamus eligendi mollitia? Adipisci,
-          assumenda quia.
+          <%= cafe.description %>
         </p>
-        <button class="bouton-catalogue">Catalogue</button>
+        <a href="/catalogue"><button class="bouton-catalogue">Catalogue</button></a>
+        
       </div>
     </main>
     <%- include('partials/footer') %>
